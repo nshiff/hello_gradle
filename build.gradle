@@ -1,0 +1,22 @@
+// following guide: https://spring.io/guides/gs/gradle/
+
+apply plugin: "java"
+apply plugin: "application"
+
+repositories{
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+mainClassName = "hello.HelloWorld"
+
+dependencies{
+    compile "joda-time:joda-time:2.2"
+    testCompile "junit:junit:4.12"
+}
+
+jar{
+    baseName "gs-gradle-02"
+    version "0.2.1"
+}
